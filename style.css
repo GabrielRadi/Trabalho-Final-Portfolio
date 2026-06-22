@@ -1,7 +1,9 @@
 * {
+  cursor: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
 }
 
 header {
@@ -16,7 +18,6 @@ header {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  cursor: pointer;
 }
 
 
@@ -34,8 +35,78 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00adb5;
+  color: #15e0d6;
 }
+
+
+body {
+  background: radial-gradient(circle, #1a1a24 0%, #08080c 100%);
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+::selection {
+  background-color: rgb(223, 37, 111);
+  color: #fff;
+}
+
+
+.main-content {
+  container-type: inline-size;
+  max-width: 500px;
+  background: radial-gradient(ellipse at top, rgb(240, 29, 194) 60%, rgb(25, 168, 228) 100%);
+  border-radius: 50px;
+  height: 400px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* animações do script */
+
+.jsb-player {
+  width: 16px;
+  height: 16px;
+  background-color: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease-out;
+}
+
+.dash-effect {
+  transform: translate(-50%, -50%) scale(2.5);
+  background-color: #ffffff;
+  box-shadow: 0 0 30px #00f0ff, 0 0 60px #00f0ff;
+  transition: transform 0.1s ease-out, background-color 0.1s ease-out;
+}
+
+header a {
+  background-color: transparent;
+  color: #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+  padding: 10px 30px;
+  cursor: none;
+  transition: transform 0.05s linear, box-shadow 0.05s linear;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 
 footer {
   position: fixed;
@@ -74,5 +145,5 @@ footer {
 
 
 .footer-socials a:hover {
-  color: #00adb5; 
+  color: #15e0d6;
 }
