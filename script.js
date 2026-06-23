@@ -28,6 +28,20 @@ caixas.forEach(caixa => {
 });
 
 
+window.addEventListener('scroll', () => {
+  const footer = document.querySelector('footer');
+  
+  const alturaTotal = document.documentElement.scrollHeight;
+  const posicaoAtual = window.innerHeight + window.scrollY;
+
+  if (posicaoAtual >= alturaTotal - 10) {
+    footer.classList.add('show-footer');
+  } else {
+    footer.classList.remove('show-footer'); 
+  }
+});
+
+
 let musicaInit = false;
 const musica = new Audio('jsabmenu.mp3');
 musica.crossOrigin = "anonymous";

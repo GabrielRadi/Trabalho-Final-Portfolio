@@ -49,30 +49,102 @@ body {
   font-size: 20px;
 }
 
+h1 {
+  text-align: center;
+}
+
 ::selection {
   background-color: rgb(223, 37, 111);
   color: #fff;
 }
 
+.portfolio-section {
+  max-width: 900px;
+  margin: 60px auto;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.portfolio-section h1 {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Aquela sua frase de impacto estilosa */
+.frase-impacto {
+  color: #b0b0b8;
+  font-style: italic;
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.5;
+}
+
+
 .main-content {
-  container-type: inline-size;
-  max-width: 500px;
-  background-image:
-    linear-gradient(#1a1a24, #1a1a24),
-    radial-gradient(ellipse at top, rgb(240, 29, 194) 60%, rgb(25, 168, 228) 100%);
-  border-radius: 50px;
-  height: 400px;
-  margin: 50px;
+  background-color: #0c0c12;
+  border: 4px solid #00ff66;
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.4), inset 0 0 15px rgba(0, 255, 102, 0.1);
+  border-radius: 40px;
+  padding: 40px;
+  margin: 20px;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+
+  height: auto;
+}
+
+
+.portfolio-coluna {
+  flex: 1;
+  text-align: left;
+}
+
+.portfolio-coluna h1 {
+  color: #00ff66;
+  font-size: 1.4rem;
+  border-bottom: 2px solid rgba(0, 255, 102, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.portfolio-coluna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 20px;
-  padding: 30px;
+  gap: 15px;
+}
+
+.portfolio-coluna li {
+  color: #ffffff;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.4;
+}
+
+.portfolio-coluna li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: #00ff66;
+  font-size: 0.8rem;
+  top: 1px;
+  text-shadow: 0 0 5px #00ff66;
 }
 
 .sobre-mim-box {
   max-width: 100%;
-  min-height: 300px;
+  min-height: 700px;
   margin: 10px;
   padding: 30px;
   display: flex;
@@ -103,16 +175,16 @@ body {
 
 .foto-perfil {
   width: 150px;
-  height: 150px; 
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  
+
 
   border: 3px solid #ffd900;
   box-shadow: 0 0 15px rgba(255, 217, 0, 0.6);
-  
+
   margin: 15px auto;
-  display: block; 
+  display: block;
 }
 
 .sobre-mim-box article {
@@ -170,6 +242,61 @@ body {
   color: rgb(240, 29, 194);
 }
 
+.projetos-section {
+  max-width: 900px;
+  margin: 60px auto;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.projetos-section h1 {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255, 94, 151, 0.3);
+}
+
+.projetos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.projeto-card {
+  flex: 1;
+  background-color: #0d0614;
+  border: 3px solid #ff5e97;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: left;
+
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.projeto-card h2 {
+  color: #ff5e97;
+  font-size: 1.4rem;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+}
+
+.projeto-card p {
+  color: #e2e2e8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.projeto-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  /* O card sobe e cresce de leve */
+  box-shadow: 0 10px 25px rgba(255, 94, 151, 0.5), inset 0 0 10px rgba(255, 94, 151, 0.2);
+  border-color: #ffffff;
+}
+
 /* animações do script */
 
 .jsb-player {
@@ -210,6 +337,7 @@ nav ul li {
 
 p {
   font-family: 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 footer {
@@ -224,8 +352,14 @@ footer {
   padding: 20px 10%;
   background-color: #1a1a1a;
   border-top: 1px solid #222;
+
+  transform: translateY(100%); 
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+footer.show-footer {
+  transform: translateY(0); 
+}
 
 
 .logo-footer {
