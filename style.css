@@ -8,12 +8,13 @@
 }
 
 header {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  padding: 20px 10%;
-  background-color: #1a1a1a;
-  color: #fff;
+  gap: 20px;
+  padding: 20px;
 }
 
 .logo {
@@ -72,7 +73,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* Aquela sua frase de impacto estilosa */
 .frase-impacto {
   color: #b0b0b8;
   font-style: italic;
@@ -386,6 +386,20 @@ footer.show-footer {
 }
 
 /* Mobile */
+
+* {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+  background-color: #0c0c12; 
+}
+
+
 @media (max-width: 768px) {
     .meus-contatos-box,
   .sobre-mim-box,

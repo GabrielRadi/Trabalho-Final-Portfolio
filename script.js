@@ -41,6 +41,28 @@ window.addEventListener('scroll', () => {
   }
 });
 
+function verificarFooter() {
+  const footer = document.querySelector('footer');
+  
+  const alturaTotal = document.documentElement.scrollHeight;
+  const alturaJanela = window.innerHeight;
+  const posicaoAtual = alturaJanela + window.scrollY;
+
+  if (alturaTotal <= alturaJanela) {
+    footer.classList.add('show-footer');
+  } 
+  else if (posicaoAtual >= alturaTotal - 10) {
+    footer.classList.add('show-footer');
+  } 
+  else {
+    footer.classList.remove('show-footer');
+  }
+}
+
+window.addEventListener('load', verificarFooter);   
+window.addEventListener('scroll', verificarFooter);
+window.addEventListener('resize', verificarFooter);
+
 
 let musicaInit = false;
 const musica = new Audio('jsabmenu.mp3');
