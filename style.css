@@ -384,3 +384,65 @@ footer.show-footer {
 .footer-socials a:hover {
   color: #15e0d6;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .meus-contatos-box,
+  .sobre-mim-box,
+  .portfolio-section,
+  .projetos-section {
+    max-width: 95%;
+    margin: 30px auto; 
+    padding: 20px; 
+    border-radius: 30px; 
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 5%;
+  }
+  
+  header a {
+    font-size: 0.9rem; 
+    padding: 8px 15px;
+  }
+
+  .meus-contatos-box {
+    flex-direction: column;
+    height: auto; 
+    text-align: center;
+  }
+  
+  .meus-contatos-box ul {
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+  
+  .portfolio-coluna h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .projetos-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .projeto-card {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 5%;
+    text-align: center;
+  }
+}
